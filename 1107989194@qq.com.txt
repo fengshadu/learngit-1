@@ -1,0 +1,73 @@
+初始化一个Git仓库
+
+git init
+
+添加文件到一个Git仓库
+
+1，先add，再commit
+2，一次可以add多个文件
+
+git diff 查看修改了什么
+git status 查看当前状态
+
+版本回滚部分内容
+
+git log —pretty=oneline   查看最近的修改记录
+
+HEAD 表示最新版本
+HEAD^ 上一个版本
+cat 文件名    查看文件内容
+
+git reset —hard 版本号   回去未来版本（版本号是值钱git log时出来的）
+
+git log   查看提交历史
+git reflow     查看命令历史
+
+工作区和暂存区
+
+git add 来到stage
+git commit 来到master
+
+管理修改
+
+git管理的是修改，不是文件
+
+撤销修改
+
+git checkout —  fileName        文件在工作区的修改全部撤销
+
+删除一个文件
+
+git rm  文件名
+
+添加远程仓库
+
+git remote add oringin git@github.com:fengshadu/learngit.git关联一个远程仓库
+
+git push -u origin master   推送master分支的内容
+
+克隆一个仓库
+
+git clone git@github.com:fengshadu/gitskills
+
+分支管理
+
+查看分支 git branch
+切换分支 git checkout 分支名
+创建并创建  git checkout －b 分支名
+合并某分支到当前分支  git merge 分支名
+删除分支  git branch －d 分支名
+
+解决冲突：
+当master和feturel分支合并冲突时，先手动合并，然后再commit
+
+分支管理策略：
+活是在分支上干的，master时用来发布版本使用
+
+ 多人协作：
+git remote -v 查看远程库信息
+git push origin 分支名  本地推送分支
+git pull 远程抓取分支
+git pull origin master：master    远程主机的master分支到本地的master
+
+ 标签管理
